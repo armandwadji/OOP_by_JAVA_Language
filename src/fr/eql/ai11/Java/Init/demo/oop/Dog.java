@@ -18,20 +18,28 @@ public class Dog {
     private  int age; // Par défaut on à 0
     private  float size; // Par défaut on à 0
     private float weight; // Par défaut on à 0
+    private  Toy toy;
 
         /******* CONSTRUCTEUR *******/
 
-    //Constructeur Vide
+    //Constructeur Vide :
+    //En l'absence de déclaration d'un constructeur il y aura par défaut
+    //un constructeur vide disponible. Par contre si un constructeur
+    //surchargé est déclaré, il faudra dans ce cas déclarer un constructeur vide
     public Dog(){
         super(); // Permet d'aller cherché le constructeur du parent
     }
 
     //Constructeur Plein
-    public Dog(String name, int age, float size, float weight) {
+    public Dog(String name, int age, float size, float weight, Toy toy) {
+        //Super veut dire que ce construteur va appel le constructeur de son parent.
+        super();
         this.name = name;
         this.age = age;
         this.size = size;
         this.weight = weight;
+        this.toy = toy;
+
     }
      /************************************/
         public Dog(int age, float size){
@@ -52,21 +60,23 @@ public class Dog {
     }
 
     public void fetchBall(int times){
-        System.out.println("Je rapporte " + times + " fois ma baballe .");
+        System.out.println(name + " rapporte  " + times + " fois la baballe .");
     }
 
     public float sizeWeightRatio(){
         return size / weight;
     }
 
-    // Accesseurs : Getters / Setters
+    // Accesseurs et Mutateurs: Getters / Setters
 
-    //Getter permet d'avoir d'accè à la variable de l'instance
+    //Getter (Accesseurs) :
+    // permet d'avoir accè à la variable de l'instance
     public String getName() {
         return name;
     }
 
-    //Setter permet de modifier l'attribut de l' instance
+    //Setter (Mutateurs):
+    // permet de modifier ou affecter une valeur à l'attribut de l' instance
     public void setName(String name) {
         this.name = name;
     }
@@ -88,5 +98,25 @@ public class Dog {
     }
     public void setWeight(float weight) {
         this.weight = weight;
+    }
+
+    //Il est conseillé de supprimé les toString a la fin du projet
+    // pour pas crée des bugs sur les API rest par exemple.
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", size=" + size +
+                ", weight=" + weight +
+                ", toy=" + toy +
+                '}';
+    }
+
+    public Toy getToy() {
+        return toy;
+    }
+    public void setToy(Toy toy) {
+        this.toy = toy;
     }
 }
