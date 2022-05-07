@@ -2,13 +2,23 @@ package fr.eql.ai11.Java.Init.demo.oop;
 
 public class Dog {
 
-    /*Rappel des types de variables:
+    /*
+        Rappel des types de variables:
         BOOLEENS: booleen ; true / false
         Entiers: byte / short / int / long
 
         ENCAPSULATION: Faire en sorte que les attibuts d'une méthode ne soit pas changeable de l'extérieur.
                        Chaque objet est responsable de sa méthode.
-    * */
+
+        STATIC:  Static nous permet d'appeler une méthode d'une classe sans avoir besoin de l'instancier
+                dans un variable initialement.
+                Exemple: Class.Methode();
+
+        SANS STATIQUE: Sans statique il nous faudra instancier la classe dans une variable pour pouvoir
+                       avoir à tous son contenue disponible et accéssibles, dont les Méthodes incluses.
+                       Exemple: Class p = new Class();
+                                p.Method();
+    */
 
     //Attributs (Variables d'instance)
     private String name; // Par défaut on à null
