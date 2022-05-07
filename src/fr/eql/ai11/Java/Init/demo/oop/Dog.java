@@ -30,18 +30,16 @@ public class Dog {
         /******* CONSTRUCTEUR *******/
 
     /*Constructeur Vide :
-
-        En l'absence de déclaration d'un constructeur il y aura par défaut
-        un constructeur vide disponible. Par contre si un constructeur
+        En l'absence de déclaration d'un constructeur, il y aura par défaut
+        un constructeur vide disponible. Par contre, si un constructeur
         surchargé est déclaré, il faudra dans ce cas déclarer un constructeur vide
     */
     public Dog(){
-
     }
 
     //Constructeur Plein
     public Dog(String name, int age, float size, float weight, Toy toy) {
-        //Super veut dire que ce construteur va appeller le constructeur de son parent.
+        //Super veut dire que ce construteur va appeler le constructeur de son parent.
         super();
         this.name = name;
         this.age = age;
@@ -70,7 +68,7 @@ public class Dog {
     //VOID veut dire que la méthode ne retourne rien
 
     //PROTECTED: Permet de rendre une class visible par toutes les autres class du même package,
-    //ainsi que ses enfant du même package ou non.
+    //ainsi que les enfants de cette classe qui sont dans un autre package.
     protected void bark(){
         System.out.println("Ouaf Ouaf !");
     }
@@ -83,16 +81,16 @@ public class Dog {
         return size / weight;
     }
 
-    // Accesseurs et Mutateurs: Getters / Setters
+    // Accesseurs et Mutateurs : Getters / Setters
 
     //Getter (Accesseurs) :
-    // permet d'avoir accè à la variable de l'instance
+    // permet d'avoir accès à la variable de l'instance
     public String getName() {
         return name;
     }
 
     //Setter (Mutateurs):
-    // permet de modifier ou affecter une valeur à l'attribut de l' instance
+    // permet de modifier ou affecter une valeur à l'attribut de l'instance
     public void setName(String name) {
         this.name = name;
     }
@@ -116,7 +114,7 @@ public class Dog {
         this.weight = weight;
     }
 
-    //Il est conseillé de supprimé les toString a la fin du projet
+    //Il est conseillé de supprimer les toString a la fin du projet
     // pour pas crée des bugs sur les API rest par exemple.
     @Override
     public String toString() {

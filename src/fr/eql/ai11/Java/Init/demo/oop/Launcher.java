@@ -10,13 +10,13 @@ public class Launcher {
         //Instanciation s'un objet avec le constructeur surchargé
         Dog dog2 = new Dog("Fido", 8, 100, 30, dog2Toy);
 
-        //Affectation des attributs à dog1
+        //Affectation des attributs à dog1 grace a son setter
         dog1.setName("Laika");
         dog1.setAge(12);
         dog1.setSize(80);
         dog1.setWeight(20);
 
-        //Affichage des attributs
+        //Affichage des attributs grâce à leur getter
         System.out.println("Ce chien s'appelle : " + dog1.getName() + "\r\n" +
                 "Il à " + dog1.getAge() + " ans " + " et pèse "
                 + dog1.getWeight() + " kg \r\n");
@@ -27,6 +27,7 @@ public class Launcher {
                   dog2.getToy().getToyName() + "\r\n");
 
         String dog2ToyName;
+        
         //Récupération du nom du jouet de dog2 (en 2 étapes)
         Toy dog2ToyInstance = dog2.getToy();
         dog2ToyName = dog2ToyInstance.getToyName();
@@ -38,11 +39,12 @@ public class Launcher {
         System.out.println(dog2ToyName);
         
         //dog2.getToy().getToyName() cela nous permet d'aller dans l'objet 
-        // toy et d'aller chercher le nom du jouait en question
+        // toy et d'aller chercher le nom du jouet en question
         
         /*  Si l'attribut (variable d'instance) "name" de l'objet Dog est public,
             Alors on peut directement y accéder et le changer sans passer par des
-            Accesseur (plus précisement un Seter).
+            Accesseurs (plus précisément un Setter). Ce qui n'est pas une bonne
+            pratique.
 
             System.out.println(dog1.name);
             dog1.name = "toto";
@@ -68,9 +70,9 @@ public class Launcher {
                     " est " +dog2.sizeWeightRatio() + " kg.");
             System.out.println("\n");
 
-            //Les méthodes herité des parents
+            //Les méthodes herités des parents
             System.out.println(dog2.toString()); //Il nous donne le chemin
-                                                // de l'emplacement mémoir
+                                                // de l'emplacement mémoire
 
 
     }
