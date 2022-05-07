@@ -2,15 +2,12 @@ package fr.eql.ai11.Java.Init.demo.oop;
 
 public class Dog {
 
-    /*Les types de variables:
+    /*Rappel des types de variables:
         BOOLEENS: booleen ; true / false
         Entiers: byte / short / int / long
 
         ENCAPSULATION: Faire en sorte que les attibuts d'une méthode ne soit pas changeable de l'extérieur.
                        Chaque objet est responsable de sa méthode.
-
-        PROTECTED: Permet de rendre une class visible par toutes les autres class du même package,
-                   ainsi
     * */
 
     //Attributs (Variables d'instance)
@@ -22,17 +19,19 @@ public class Dog {
 
         /******* CONSTRUCTEUR *******/
 
-    //Constructeur Vide :
-    //En l'absence de déclaration d'un constructeur il y aura par défaut
-    //un constructeur vide disponible. Par contre si un constructeur
-    //surchargé est déclaré, il faudra dans ce cas déclarer un constructeur vide
+    /*Constructeur Vide :
+
+        En l'absence de déclaration d'un constructeur il y aura par défaut
+        un constructeur vide disponible. Par contre si un constructeur
+        surchargé est déclaré, il faudra dans ce cas déclarer un constructeur vide
+    */
     public Dog(){
-        super(); // Permet d'aller cherché le constructeur du parent
+
     }
 
     //Constructeur Plein
     public Dog(String name, int age, float size, float weight, Toy toy) {
-        //Super veut dire que ce construteur va appel le constructeur de son parent.
+        //Super veut dire que ce construteur va appeller le constructeur de son parent.
         super();
         this.name = name;
         this.age = age;
@@ -47,14 +46,21 @@ public class Dog {
             this.size = size;
         }
         //Impossible de faire un constructeur dont la déclaration des types ont le même ordre.
-//        public Dog(int age, float weight){
-//            this.age = age;
-//            this.size = size;
-//        }
+        /*
+            public Dog(int age, float weight){
+                this.age = age;
+                this.size = size;
+            }
+        */
+
     /***************************************/
 
-    //Méthodes
-    //void veut dire que la méthode ne retourne rien
+    /********  METHODES ************/
+
+    //VOID veut dire que la méthode ne retourne rien
+
+    //PROTECTED: Permet de rendre une class visible par toutes les autres class du même package,
+    //ainsi que ses enfant du même package ou non.
     protected void bark(){
         System.out.println("Ouaf Ouaf !");
     }

@@ -23,8 +23,8 @@ public class Launcher {
 
         System.out.println("Ce chien s'appelle : " + dog2.getName() + "\r\n" +
                 "Il à " + dog2.getAge() + " ans " + " pèse "
-                + dog2.getWeight() + " kg." + " son jouait est\n " +
-                  dog2.getToy().getToyName());
+                + dog2.getWeight() + " kg." + " son jouait est  " +
+                  dog2.getToy().getToyName() + "\r\n");
 
         String dog2ToyName;
         //Récupération du nom du jouet de dog2 (en 2 étapes)
