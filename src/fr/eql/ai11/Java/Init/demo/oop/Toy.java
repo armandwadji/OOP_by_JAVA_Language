@@ -10,18 +10,21 @@ public class Toy {
     }
 
     public Toy(String toyName) {
+
         ToyName = toyName;
     }
 
     //**************************
 
-    //On définit des getter et des setteurs
+    //On définit des getters et des setters
 
     public String getToyName() {
+
         return ToyName;
     }
 
     public void setToyName(String toyName) {
+
         ToyName = toyName;
     }
     //*************************
