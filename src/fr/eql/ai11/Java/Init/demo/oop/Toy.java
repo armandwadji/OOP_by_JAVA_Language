@@ -32,8 +32,7 @@ public class Toy {
     //Il faut définir le toString de jouet pour pouvoir le voir dans Dog.
     @Override
     public String toString() {
-        return "Toy{" +
-                "ToyName='" + ToyName + '\'' +
-                '}';
+        return
+                "ToyName='" + ToyName + '\'' ;
     }
 }

@@ -78,6 +78,7 @@ public class Launcher {
             System.out.println("\n");
 
             //Les méthodes herités des parents
+            System.out.println(dog1.toString());
             System.out.println(dog2.toString()); //Il nous donne le chemin
                                                 // de l'emplacement mémoire
 
