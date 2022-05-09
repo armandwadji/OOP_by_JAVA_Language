@@ -27,7 +27,7 @@ public class Reader {
 //                            + getBooks().size());
 
         boolean inApplication;
-        List<BOOK> books = new ArrayList<>();
+        ArrayList<BOOK> books = new ArrayList<>();
         do {
             inApplication = true;
             int optionNumber;

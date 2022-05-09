@@ -1,12 +1,8 @@
 package fr.eql.ai11.Java.Init.tp.library.v1;
 
-import fr.eql.ai11.Java.Init.demo.enums.DogBreed;
-
 import javax.swing.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class BOOK {
     String title;
@@ -27,7 +23,7 @@ public class BOOK {
     public BOOK recordBooks(){
         int booksNumber = Integer.parseInt(JOptionPane.showInputDialog("Combien de livres voulez enregistré."));
         Categories[] categories = Categories.values();
-        List<BOOK> books = new ArrayList<>();
+        ArrayList<BOOK> books = new ArrayList<>();
         for (int i = 0; i < booksNumber; i++) {
             String title = JOptionPane.showInputDialog("Entrez le titre du livre : ");
             String author = JOptionPane.showInputDialog("Entrez l' auteur du livre : ");
@@ -42,7 +38,7 @@ public class BOOK {
             BOOK book = new BOOK(getTitle(), getAuthor(),getIsbn(), getCategory());
             books.add(book);
         }
-        return ;
+        return (books);
     }
 
     public String getTitle() {
