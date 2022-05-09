@@ -14,7 +14,7 @@ public class DemoArrayList {
         */
 
         //initialisation d'une liste qui est une interface.
-        List<Toy> toys = new ArrayList<>(); //Les chevrons <> ne sont pas nécessaires2
+        List<Toy> toys = new ArrayList<>(); //Les chevrons <> ne sont pas nécessaires
 
         //Ajouter des éléments (instances) à ma liste
         Toy toy1 = new Toy("Balle");
