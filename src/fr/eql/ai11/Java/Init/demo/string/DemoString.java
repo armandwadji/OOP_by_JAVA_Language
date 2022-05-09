@@ -57,7 +57,6 @@ public class DemoString {
                 concatener des chaînes de caractères de manière plus performante qu'une
                 concaténation classique
             * */
-
             StringBuffer myBuffer = new StringBuffer();
             myBuffer
                     .append(part1) //Pour rajouter à la fin de la chaîne
@@ -67,6 +66,38 @@ public class DemoString {
                     .insert(part1.length() + part2.length() + 1, " "); //Pour insérer à une position donnée
 //            allparts = myBuffer.toString();
             System.out.println("Concaténation par StringBuffer : " + myBuffer);
+
+        System.out.println("\r\n#### Comparaisons entre deux chaînes identiques ###");
+            System.out.println("\r\n    --- Entre deux litteraux ---");
+                String a = "toto";
+                String b = "toto";
+            System.out.println("--- Objet ---");
+                System.out.println("Comparaison == :" + a == b);//a et b pointe vers le même espace mémoire
+                                                                // contrairement aux objets
+            System.out.println("--- Contenue ---");
+            System.out.println("Comparaison equals() :" + a.equals(b));
+
+
+        System.out.println("\r\n#### Comparaisons entre deux objets construits ###");
+            System.out.println("\r\n     --- Entre deux litteraux ---");
+            String c = new String("toto");
+            String d = new String("toto");
+            System.out.println("--- Objet ---");
+            System.out.println("Comparaison == :" + c == d); //a et b ne pointes pas au
+            // même espace de mémoire objets
+            System.out.println("--- Contenue ---");
+            System.out.println("Comparaison equals() :" + c.equals(d));
+
+        System.out.println("\r\n#### Comparaisons entre un litéral et un objet construit ###");
+            System.out.println("\r\n    --- Entre litéral et objet ---");
+            String e = new String("toto");
+            String f = "toto";
+            System.out.println("--- Objet ---");
+            System.out.println("Comparaison == :" + e == f); //a et b ne pointes pas au
+            // même espace de mémoire objets
+            System.out.println("--- Contenue ---");
+            System.out.println("Comparaison equals() :" + e.equals(f));
+
 
 
 
