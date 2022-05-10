@@ -1,5 +1,7 @@
 package fr.eql.ai11.Java.Init.demo.oop;
 
+import fr.eql.ai11.Java.Init.demo.enums.DogBreed;
+
 public class Dog {
 
     /*
@@ -25,7 +27,14 @@ public class Dog {
     private  int age; // Par défaut on à 0
     private  float size; // Par défaut on à 0
     private float weight; // Par défaut on à 0
+    private DogBreed breed;
     private  Toy toy; //On crée un Attribut toy de type de la classe Toy
+
+    /*
+    Cette attribut est final:
+    il doit être assigné au plus tard au moment de la construction
+     */
+    private final int registrationNumber;
 
         /******* CONSTRUCTEUR *******/
 
@@ -35,24 +44,37 @@ public class Dog {
         surchargé est déclaré, il faudra dans ce cas déclarer un constructeur vide
     */
     public Dog(){
+        //On doit assigné ici une valeur à cette attribut final.
+        registrationNumber = 0;
     }
 
     //Constructeur Plein
-    public Dog(String name, int age, float size, float weight, Toy toy) {
-        //Super veut dire que ce construteur va appeler le constructeur de son parent.
-        super();
+//    public Dog(String name, int age, float size, float weight, Toy toy) {
+//        //Super veut dire que ce construteur va appeler le constructeur de son parent.
+//        super();
+//        this.name = name;
+//        this.age = age;
+//        this.size = size;
+//        this.weight = weight;
+//        this.toy = toy;
+//
+//    }
+
+    public Dog(String name, int age, float size, float weight, DogBreed breed, Toy toy, int registrationNumber) {
         this.name = name;
         this.age = age;
         this.size = size;
         this.weight = weight;
+        this.breed = breed;
         this.toy = toy;
-
+        this.registrationNumber = registrationNumber;
     }
-     /************************************/
-        public Dog(int age, float size){
-            this.age = age;
-            this.size = size;
-        }
+
+    /************************************/
+//        public Dog(int age, float size){
+//            this.age = age;
+//            this.size = size;
+//        }
         //Impossible de faire un constructeur dont la déclaration des types ont le même ordre.
         /*
             public Dog(int age, float weight){
@@ -128,16 +150,16 @@ public class Dog {
 
     //Il est conseillé de supprimer les toString a la fin du projet
     // pour pas crée des bugs sur les API rest par exemple.
-    @Override
-    public String toString() {
-        return "Dog{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", size=" + size +
-                ", weight=" + weight +
-                ", toy=" + toy +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Dog{" +
+//                "name='" + name + '\'' +
+//                ", age=" + age +
+//                ", size=" + size +
+//                ", weight=" + weight +
+//                ", toy=" + toy +
+//                '}';
+//    }
 
     //Le getter getToy nous permet de voir le contenu de la classe toy
     public Toy getToy() {
