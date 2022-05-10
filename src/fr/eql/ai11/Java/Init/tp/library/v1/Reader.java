@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Reader {
-    String name;
-    String surName;
-    String address;
-    List<Book> books = new ArrayList<>();
+    private String name;
+    private String surName;
+    private  String address;
+    private List<Book> books = new ArrayList<>();
 
     public Reader() {
     }
@@ -20,7 +20,13 @@ public class Reader {
         this.books = books;
     }
 
-    public void principalMenu(List<Book>books){
+    public Reader(String name, String surName, String address) {
+        this.name = name;
+        this.surName = surName;
+        this.address = address;
+    }
+
+    public void principalMenu(){
 //        System.out.println(   getName() + " - "
 //                            + getSurName() + " - "
 //                            + getAddress() + " - "
@@ -28,7 +34,7 @@ public class Reader {
 
         boolean inApplication;
         Book book = new Book();
-//        List<Book> books = new ArrayList<>();
+        List<Book> books = new ArrayList<>();
 
         do {
             inApplication = true;
@@ -70,14 +76,15 @@ public class Reader {
                             + "\r\nAddress : " + getAddress());
                     break;
                 case 2:
-                    book.recordBooks(books);
+                    book.recordBooks();
                     break;
                 case 3:
                     inApplication = false;
                     break;
                 case 4:
-                    books = getBooks();
-                    showBooks(books);
+//                    books = getBooks();
+//                    showBooks(books);
+
                     break;
                 default:
             }

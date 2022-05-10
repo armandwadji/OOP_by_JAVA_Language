@@ -4,10 +4,10 @@ import javax.swing.*;
 import java.util.List;
 
 public class Book {
-    String title;
-    String author;
-    int isbn;
-    String category;
+    private String title;
+    private String author;
+    private int isbn;
+    private String category;
 
     public Book() {
     }
@@ -19,7 +19,7 @@ public class Book {
         this.category = category;
     }
 
-    public void recordBooks(List<Book> books){
+    public void recordBooks(){
         //On récupère la valeur en entier du nombre de livres à ajouter saisi par l'utilisateur
         int booksNumber = Integer.parseInt(JOptionPane.showInputDialog("Combien de livres voulez enregistré."));
 
@@ -53,7 +53,8 @@ public class Book {
             Book book = new Book(getTitle(), getAuthor(),getIsbn(), getCategory());
 
             //On ajoute à la liste des livres
-            books.add(book);
+
+//            books.add(book);
         }
 
     }
