@@ -26,7 +26,7 @@ public class Reader {
         this.address = address;
     }
 
-    public void principalMenu(){
+    public void principalMenu(List<Book> books){
 //        System.out.println(   getName() + " - "
 //                            + getSurName() + " - "
 //                            + getAddress() + " - "
@@ -34,7 +34,7 @@ public class Reader {
 
         boolean inApplication;
         Book book = new Book();
-        List<Book> books = new ArrayList<>();
+//        List<Book> books = new ArrayList<>();
 
         do {
             inApplication = true;
@@ -76,15 +76,14 @@ public class Reader {
                             + "\r\nAddress : " + getAddress());
                     break;
                 case 2:
-                    book.recordBooks();
+                    book.recordBooks(books);
                     break;
                 case 3:
                     inApplication = false;
                     break;
                 case 4:
-//                    books = getBooks();
-//                    showBooks(books);
-
+                    books = getBooks();
+                    showBooks(books);
                     break;
                 default:
             }

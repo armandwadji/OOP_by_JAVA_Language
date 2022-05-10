@@ -19,7 +19,7 @@ public class Book {
         this.category = category;
     }
 
-    public void recordBooks(){
+    public List<Book> recordBooks(List<Book> books){
         //On récupère la valeur en entier du nombre de livres à ajouter saisi par l'utilisateur
         int booksNumber = Integer.parseInt(JOptionPane.showInputDialog("Combien de livres voulez enregistré."));
 
@@ -54,9 +54,10 @@ public class Book {
 
             //On ajoute à la liste des livres
 
-//            books.add(book);
+            books.add(book);
         }
 
+        return books;
     }
 
     public String getTitle() {
