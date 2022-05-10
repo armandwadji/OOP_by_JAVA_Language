@@ -8,73 +8,96 @@ public class Reader {
     String name;
     String surName;
     String address;
-    List<BOOK> books = new ArrayList<>();
+    List<Book> books = new ArrayList<>();
 
     public Reader() {
     }
 
-    public Reader(String name, String surName, String address, List<BOOK> books) {
+    public Reader(String name, String surName, String address, List<Book> books) {
         this.name = name;
         this.surName = surName;
         this.address = address;
         this.books = books;
     }
 
-    public void principalMenu(){
+    public void principalMenu(List<Book>books){
 //        System.out.println(   getName() + " - "
 //                            + getSurName() + " - "
 //                            + getAddress() + " - "
 //                            + getBooks().size());
 
         boolean inApplication;
-        ArrayList<BOOK> books = new ArrayList<>();
+        Book book = new Book();
+//        List<Book> books = new ArrayList<>();
+
         do {
             inApplication = true;
             int optionNumber;
+           
+
             System.out.println(/*** BIENVENUE DANS L'APPLICATION READERBOOKS ***/);
 
             if(getBooks().size() > 0){
                  optionNumber = Integer.parseInt(JOptionPane.showInputDialog(""
-                        + "-Si vous voulez afficher votre profil : Taper 1 \n"
-                        + "-Si vous voulez enregistrer des livres : Taper 2 \n"
-                        + "-Si vous voulez quitter l'application  : Taper 3 \n"
-                        + "-Si vous voulez listé vos livres       : Taper 4" ));
+                        + "- Afficher votre profil Taper   1 : \n"
+                        + "- Enregistrer des livres Taper  2 : \n"
+                        + "- Quitter l'application Taper   3 : \n"
+                        + "- Listé vos livres Taper        4 : \n" ));
 
             }else{
                  optionNumber = Integer.parseInt(JOptionPane.showInputDialog(""
-                        + "-Si vous avoulez afficher votre profil : Taper 1 \n"
-                        + "-Si vous voulez enregistrer des livres : Taper 2 \n"
-                        + "-Si vous voulez quitter l'application : Taper 3 " ));
+                        + "- Afficher votre profil Taper 1 :  \n"
+                        + "- Enregistrer des livres Taper 2 :  \n"
+                        + "- Quitter l'application Taper  3 :  \n" ));
             }
+           inApplication =  switchFunction(optionNumber, inApplication, book);
+
+        }while (inApplication);
+
+        JOptionPane.showMessageDialog(null,
+                "Merci d'avoir utiliser l'application");
+
+
+    }
+
+        public  boolean switchFunction(int optionNumber, boolean inApplication, Book book){
 
             switch (optionNumber){
                 case 1:
-                    JOptionPane.showMessageDialog(null, "Profil utilisateur : \r\n"
-                            + "Nom : " + getName()
+                    JOptionPane.showMessageDialog(null, "Profil utilisateur : "
+                            + "\r\nNom : " + getName()
                             + "\r\nprenom : " + getSurName()
                             + "\r\nAddress : " + getAddress());
                     break;
                 case 2:
-//                    System.out.println("Enregistrer un livre");
-                    BOOK book = new BOOK();
-//                    book.recordBooks();
-                    books.add(book.recordBooks());
+                    book.recordBooks(books);
                     break;
                 case 3:
-//                    System.out.println("Quitter l'application");
                     inApplication = false;
                     break;
                 case 4:
-                    System.out.println("Afficher les livres");
+                    books = getBooks();
+                    showBooks(books);
                     break;
                 default:
             }
+            return inApplication;
+        }
 
-        }while (inApplication);
+    public void showBooks(List<Book> books){
+        String show = "";
+        for (Book book : books) {
+            show += "Livre " + (books.indexOf(book) + 1) + " : "
+                    + "[ title : " + book.getTitle()
+                    + ", Author : " + book.getAuthor()
+                    + ", isbn : " + book.getIsbn()
+                    + ", Catégorie : " + book.getCategory()
+                    + "]\r\n";
 
-        JOptionPane.showMessageDialog(null, "Merci d'avoir utiliser l'application");
 
+        }
 
+        JOptionPane.showMessageDialog(null, show);
     }
 
     public String getName() {
@@ -101,11 +124,11 @@ public class Reader {
         this.address = address;
     }
 
-    public List<BOOK> getBooks() {
+    public List<Book> getBooks() {
         return books;
     }
 
-    public void setBooks(List<BOOK> books) {
+    public void setBooks(List<Book> books) {
         this.books = books;
     }
 }

@@ -8,7 +8,7 @@ public class Launcher {
             System.out.println("Valeur de la variable : " + breed);
 
         System.out.println("\r\n*** Transformer une chaîne de caratères" +
-                "en valeur d'énum ***");
+                "en valeur d'énumération(enum) ***");
             breed = DogBreed.valueOf("LEVRIER");
             System.out.println("Valeur de la variable : " + breed);
 
