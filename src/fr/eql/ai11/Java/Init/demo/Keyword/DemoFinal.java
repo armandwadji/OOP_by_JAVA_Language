@@ -21,7 +21,7 @@ public class DemoFinal {
         //On ne peut pas assigner une nouvelle valeur à une variable de type primitif
         //number  = 1; <- impossible
 
-        //On peut l'état (valeur des attributs) d'une instance déclarer finale
+        //On peut changé l'état (valeur des attributs) d'une instance déclarer finale
         System.out.println("Référence mémoire de Milou :" + milou);
         System.out.println("age de Milou : " + milou.getAge());
         milou.setAge(6);
