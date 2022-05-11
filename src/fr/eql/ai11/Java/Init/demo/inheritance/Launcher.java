@@ -20,7 +20,7 @@ public class Launcher {
                 DogBreed.FOX_TERRIER);
 
         fido.fetchBall(5);
-        System.out.println("L' IRM de " + fido.getBreed().name() + " est :"
+        System.out.println("L' IRM de " + fido.getName() + " est :"
                 + fido.sizeWeightRatio());
         fido.bark();
 
@@ -36,14 +36,16 @@ public class Launcher {
                 CatBreed.BENGAL);
 
         felix.fetchBall(10);
-        System.out.println("L' IRM de " + felix.getBreed().name() + " est : "
+        System.out.println("L' IRM de " + felix.getName() + " est : "
         + felix.sizeWeightRatio());
         felix.meow();
+
+        System.out.println(" ");
 
         System.out.println("\t*** Animal : Spike ***");
         /*
             Je stocke la réference à une instance de type Dog dans une variable
-            du type de sa superclasse(ici Animal).
+            du type de sa superclasse (ici Animal).
             Je n'ai désormais plus accès qu'aux attributs et méthodes d'un Animal,
             bien que l'instance en mémoire soit de type Dog.
          */
@@ -56,12 +58,14 @@ public class Launcher {
                 DogBreed.BERGER);
         spike.fetchBall(2);
         spike.sizeWeightRatio();
-        // spike.bark();
-        // spike.getBreed();
+
+        //ON ne peut pas accédé aux méthodes spécifiques de Dog car il est de type Animal
+            // spike.bark();
+            // spike.getBreed();
 
         /*** CASTE ***/
         /*
-            Je copie la reference de l'instance spike (de type Animal) dans une variable de type Dog.
+            Je copie (Caste) la reference de l'instance spike (de type Animal) dans une variable de type Dog.
             Je retrouve ainsi la possibilité d'accéder aux méthodes et attributs spécifiques à un objet
             de type Dog.
          */
@@ -79,9 +83,9 @@ public class Launcher {
                     9515,
                     CatBreed.BENGAL);
 
-             System.out.println("L'IRLM de " + garfield.getName() + garfield.sizeWeightRatio());
+            System.out.println("L'IRLM de " + garfield.getName() + " est : " + garfield.sizeWeightRatio());
             garfield.fetchBall(6);
-            //On stock garfield dans une variable type Cat pour accédé a sa méthode meow
+            //On stock (Caste) garfield dans une variable de type Cat pour accédé a sa méthode meow
             Cat castedGarfield = (Cat) garfield;
             castedGarfield.meow();
 
@@ -94,13 +98,13 @@ public class Launcher {
                 //On vérifie le type de l'instance sortie de la collection à chaque tour de boucle
                 if(animal instanceof Dog) {
                     System.out.println(animal.getName() + " est un chien.");
-                    Dog dog = (Dog) animal;
+                    Dog dog = (Dog) animal; //On caste fido pour accéder à ses méthodes
                     dog.bark();
                 }
 
                 if(animal instanceof Cat) {
                     System.out.println(animal.getName() + " est un chat.");
-                    Cat cat = (Cat) animal;
+                    Cat cat = (Cat) animal; //On caste Garfield pour accéder à ses méthodes
                     cat.meow();
                 }
 

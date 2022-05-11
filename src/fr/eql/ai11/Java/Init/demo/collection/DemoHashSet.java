@@ -11,7 +11,7 @@ public class DemoHashSet {
     public static void main(String[] args) {
         /*
             Un Set contient une collection d'éléments non ordonnés
-            et garantissant l'unicité des éléments contenus.
+            et garantissant l'unicité des éléments en fonction du critère de filtrage.
          */
 
         //Initialisation d'un Set
@@ -27,10 +27,11 @@ public class DemoHashSet {
         toys.add(toy3);
 
         System.out.println("*** Obtenir la taille et les éléments du Set ***");
-            System.out.println("Taille : " + toys.size());
+            System.out.println("Taille : " + toys.size() + "\n");
+
         System.out.println("--- Tentative d'ajout d'une instance déja présente dans le Set ---");
             toys.add(toy3);
-        System.out.println("Même taille après ajout: " + toys.size());
+            System.out.println("Même taille après ajout: " + toys.size() + "\n");
 
         /*
             Si les méthodes equals() et hashCode() ont été redéfinies dans la classe Toy,
@@ -59,7 +60,7 @@ public class DemoHashSet {
             //La liste afficher ne sera pas dans un ordre précis(par exemple
             // l'ordre d'ajout)
             for (Toy t : toys) {
-                //On peut avoir l'index, car il n'y a pas d'ordre dans un Set
+                //On peut pas avoir l'index, car il n'y a pas d'ordre dans un Set
                 System.out.println("Toy " + t.getToyName());
             }
 
@@ -67,9 +68,11 @@ public class DemoHashSet {
             toys.remove(toy1);
             System.out.println("Le Set ne contient plus que " +
                     toys.size() + " éléments.");
-            System.out.println("\r\n*** Vider le Set ***");
+        System.out.println("\r\n*** Vider le Set ***");
             //toys.removeAll(toys);
             toys = new HashSet<>();
+            System.out.println("Le Set ne contient plus que " +
+                toys.size() + " éléments.");
 
             if(toys.isEmpty()) System.out.println("Le Set toys est vide");
 

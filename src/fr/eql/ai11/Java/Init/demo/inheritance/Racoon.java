@@ -15,7 +15,7 @@ public class Racoon extends Animal{
 
     @Override
     protected void fetchBall(int time) {
-        System.out.println("Je nettoie " + time + " fois la baille.");
+        System.out.println("Je nettoie " + time + " fois la baballe.");
     }
 
     public void cleanFood(){

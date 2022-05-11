@@ -16,7 +16,7 @@ public class Dog extends Animal {
     /*
         Ce constructeur à 7 arguments appel avec super(...) le constructeur
         de la superclasse (classe mère ici "Animal") qui prend 6 arguments :
-        - Les 6 premiers arguments donnent des valeurs aux attributs de la classe mère.
+        - Les 7 premiers arguments donnent des valeurs aux attributs de la classe mère.
         - Le dernier argument sert à donner une valeur à l'attribut de la classe ici présente.
     */
     public Dog(String name,
@@ -40,7 +40,7 @@ public class Dog extends Animal {
         this(name, age, size, weight, toy, 1234, DogBreed.BERGER);
     }
 
-    //La signature de la méthode abstraite du parent à une vibilité
+    //La signature de la méthode abstraite du parent à une visibilité
     //protected.
     //Je peux changer cette visibilité vers un niveau moins restrictif
     //Exemple : on met fetchBall en public pour qu'il soit accessible par ses
@@ -56,7 +56,10 @@ public class Dog extends Animal {
         System.out.println("Ouafff ! Ouaffff !");
     }
 
+
     public DogBreed getBreed() {
         return breed;
     }
+
+
 }

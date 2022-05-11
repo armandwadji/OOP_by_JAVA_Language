@@ -2,9 +2,11 @@ package fr.eql.ai11.Java.Init.demo.inheritance;
 
 import fr.eql.ai11.Java.Init.demo.oop.Toy;
 
-//Abstract permet de spécifier que l'on ne peut pas créer une instance de cette classe
-//Et pour accéder à son contenu il faut passer par l'instanciation d'un de ses enfants
-//qui l'étend (S'ils ne sont pas eux même abstract).
+    /*
+        Abstract permet de spécifier que l'on ne peut pas créer une instance de cette classe
+        Et pour accéder à son contenu il faut passer par l'instanciation d'un de ses enfants
+        qui l'étend (S'ils ne sont pas eux même abstract).
+    */
 public abstract class Animal {
     private String name;
     private int age;
