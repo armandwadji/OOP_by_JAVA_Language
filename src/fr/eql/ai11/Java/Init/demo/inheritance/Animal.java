@@ -39,4 +39,8 @@ public abstract class Animal {
     public float sizeWeightRatio(){
         return size / weight;
     }
+
+    public String getName() {
+        return name;
+    }
 }

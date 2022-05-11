@@ -53,7 +53,7 @@ public class Dog extends Animal {
 
     //Une méthode spécifique au Dog, non présente dans son parent.
     public void bark(){
-        System.out.println("Ouaf ! Ouaf !");
+        System.out.println("Ouafff ! Ouaffff !");
     }
 
     public DogBreed getBreed() {
