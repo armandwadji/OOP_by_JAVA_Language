@@ -34,7 +34,8 @@ public class DemoHashSet {
 
         /*
             Si les méthodes equals() et hashCode() ont été redéfinies dans la classe Toy,
-            une égalité sur certains attributs constituera un doublon.
+            une égalité sur certains attributs constituera un doublon et ne sera donc pas
+            implémenter.
          */
 
         Toy toy4 = new Toy("Branche");
@@ -48,8 +49,8 @@ public class DemoHashSet {
         System.out.println("** Si equals() et hashCode() de Toy redéfinis");
             System.out.println("*** Obtenir la taille et les éléments du Set ***");
             System.out.println("Taille : " + toys.size());
-            System.out.println("--- Tentative d'ajout d'une instance dont l'attribut toyName" +
-                    " \nest égal à celui d'une instance déjà présente ---");
+            System.out.println("--- Tentative d'ajout d'une instance dont l'attribut " +
+                    " \n toyName est égal à celui d'une instance déjà présente ---");
             toys.add(toy4);
             System.out.println("Même taille après ajout: " + toys.size());
 
@@ -58,7 +59,7 @@ public class DemoHashSet {
             //La liste afficher ne sera pas dans un ordre précis(par exemple
             // l'ordre d'ajout)
             for (Toy t : toys) {
-                //On peut avoir l'index car il y'a pas d'ordre dans un Set
+                //On peut avoir l'index, car il n'y a pas d'ordre dans un Set
                 System.out.println("Toy " + t.getToyName());
             }
 
