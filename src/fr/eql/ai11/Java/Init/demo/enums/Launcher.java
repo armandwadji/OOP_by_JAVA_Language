@@ -16,6 +16,7 @@ public class Launcher {
         DogBreed[] breeds = DogBreed.values();
         System.out.println(breeds);
         for (DogBreed db : breeds) {
+            //Attention ceci est une variable d'énumération et non un String
             System.out.println(db);
         }
     }

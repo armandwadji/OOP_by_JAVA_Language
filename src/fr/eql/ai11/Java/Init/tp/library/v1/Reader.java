@@ -34,7 +34,6 @@ public class Reader {
 
         boolean inApplication;
         Book book = new Book();
-//        List<Book> books = new ArrayList<>();
 
         do {
             inApplication = true;
