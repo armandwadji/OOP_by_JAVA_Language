@@ -7,6 +7,8 @@ import fr.eql.ai11.Java.Init.demo.oop.Toy;
         Et pour accéder à son contenu il faut passer par l'instanciation d'un de ses enfants
         qui l'étend (S'ils ne sont pas eux même abstract).
     */
+
+
 public abstract class Animal {
     private String name;
     private int age;
@@ -15,6 +17,8 @@ public abstract class Animal {
     private Toy toy;
     private final int registrationNumber;
 
+    //Ce constructeur est présent pour s'assurer que le registration qui esy final
+    // ai toujours une valeur au cas où le développeur utilise un constructeur vide
     public Animal() {
         registrationNumber = 1234;
     }
@@ -36,6 +40,9 @@ public abstract class Animal {
 
     //On peut le mettre en PROTECTED pour limiter sa visibilité a tous ses enfants
     //uniquement.
+
+    //POLYMORPHISME : Une chose peut faire plusieurs choses différentes.
+    //EXEMPLE : Un animal peut être de plusieurs types(chien - chat - cheval)
     protected abstract void fetchBall(int time);
 
     public float sizeWeightRatio(){

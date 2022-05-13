@@ -109,6 +109,8 @@ public class Launcher {
                 }
 
             }
+
+            //ON créer un raton laveur.
             Animal raccon = new Racoon("Rocky",
                     5,
                     50,
@@ -117,6 +119,21 @@ public class Launcher {
                     0);
             animals.add(raccon);
 
+        System.out.println(" ");
+
+            //ON créer un Monkey
+            Animal monkey = new Monkey("Saru",
+                    15,
+                    80,
+                    20,
+                    null,
+                    4566);
+            animals.add(monkey);
+            Monkey saru = (Monkey) monkey;
+            saru.hideItem("kiwi");
+            saru.standup();
+
+            //On fait la parades de tous nos animaux.
             AnimalParade parade = new AnimalParade();
             parade.parade(animals);
 

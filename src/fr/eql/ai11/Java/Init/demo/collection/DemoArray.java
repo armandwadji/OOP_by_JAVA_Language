@@ -5,6 +5,7 @@ public class DemoArray {
 
         //Initialisation et peuplement d'un tableau à une dimension
             //En convention le nom d'une collection doit toujours avoir un s à la fin
+            String[] totos = new String[5];
             String[] seasons = {"printemps", "Eté", "Automne", "Hiver"};
 
         System.out.println("*** Lecture du troisième élément du tableau ***");

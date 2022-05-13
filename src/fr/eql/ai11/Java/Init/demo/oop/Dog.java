@@ -2,6 +2,8 @@ package fr.eql.ai11.Java.Init.demo.oop;
 
 import fr.eql.ai11.Java.Init.demo.enums.DogBreed;
 
+import java.util.Objects;
+
 public class Dog {
 
     /*
@@ -171,5 +173,18 @@ public class Dog {
     public void setToy(Toy toy) {
 
         this.toy = toy;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Dog dog = (Dog) o;
+        return registrationNumber == dog.registrationNumber;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(registrationNumber);
     }
 }

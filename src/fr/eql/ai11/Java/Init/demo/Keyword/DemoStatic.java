@@ -31,7 +31,7 @@ public class DemoStatic {
     public static void main(String[] args) {
         System.out.println("*** Appel d'une méthode Static de Math ***");
         /*
-            Il n'est pas nécéssaire de passer par l'instance d'un objet pour accéder à
+            Il n'est pas nécessaire de passer par l'instance d'un objet pour accéder à
             ses méthodes statiques.
             Il suffit d'appeler directement la classe.
         * */

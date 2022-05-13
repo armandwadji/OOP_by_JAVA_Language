@@ -11,6 +11,7 @@ public class Dog extends Animal {
         //Cette instruction appel le constructeur VIDE du parent,
         // elle est implicite, et n'a donc pas besoin d'être notée.
         //Elle est forcément en première position.
+        //héritage du constructeur vide de registration
         super();
     }
     /*
@@ -33,10 +34,11 @@ public class Dog extends Animal {
     /*
         Ce constructeur à 5 arguments appèle avec this() l'autre constructeur de la
         classe contenant 7 arguments en lui fournissant des valeurs prédéfinies pour les
-        deux derniers arguments.
+        deux derniers arguments. N'est pas beaucoup utilisé
      */
-
     public Dog(String name, int age, float size, float weight, Toy toy){
+        //Ce this prend le constructeur surcharger plus haut en lui donnant des
+        // paramètres registration et dogBreed qui ne pourront plus êtres modifié
         this(name, age, size, weight, toy, 1234, DogBreed.BERGER);
     }
 

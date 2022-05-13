@@ -2,6 +2,9 @@ package fr.eql.ai11.Java.Init.demo.inheritance;
 
 import java.util.Set;
 
+//GENERALISATION: plusieurs types de choses sont au final un même chose.
+//EXEMPLE: le chat  chien, cheval sont tous des animaux.
+
 public class AnimalParade {
 
     public void parade(Set<Animal> animals){
