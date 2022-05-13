@@ -52,4 +52,8 @@ public abstract class Animal {
     public String getName() {
         return name;
     }
+
+    public Toy getToy() {
+        return toy;
+    }
 }

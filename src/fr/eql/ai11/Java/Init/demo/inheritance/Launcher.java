@@ -126,11 +126,11 @@ public class Launcher {
                     15,
                     80,
                     20,
-                    null,
+                    new Toy("kiwi"),
                     4566);
             animals.add(monkey);
             Monkey saru = (Monkey) monkey;
-            saru.hideItem("kiwi");
+            saru.hideItem();
             saru.standup();
 
             //On fait la parades de tous nos animaux.

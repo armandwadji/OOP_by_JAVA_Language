@@ -35,7 +35,6 @@ public class Launcher {
             seasonsDragonBall.add(seasonsArmand1);    //Plus besoin de créer la liste, on utilise le getter.
             seasonsDragonBall.add(seasonsArmand1);
         */
-
         //On crée la série Dragon Ball
         Serie dragonBall = new Serie(
                                     "Dragon ball",

@@ -19,17 +19,25 @@ public class DemoIterator {
 //            }
 //        }
 
-        //L'objet iterator permet de faire des opérations sur une liste
-        //au cours de son itération.
+        //L' objet iterator permet de faire des operations sur une liste
+        //au cours de son iteration.
         //La méthode Iterator() de List permet d'utiliser l'Iterator sur
         // la liste qui est ainsi modifiée, car ils pointent vers le même
         // emplacement mémoire.
-        Iterator<Integer> integerIterator = integers.iterator();
+
+     /*   Iterator<Integer> integerIterator = integers.iterator();
         while (integerIterator.hasNext() ){
             if(integerIterator.next() == 30){
                 integerIterator.remove();
             }
-        }
+        }*/
+
+        //Nous pouvons aussi, créer une liste d'intéger contenant la
+        //valeur que nous voulons supprimé, puis nous utilisons la
+        //méthode removeAll().
+       List<Integer> number = new ArrayList<>();
+       number.add(30);
+       integers.removeAll(number);
 
         System.out.println(integers);
     }

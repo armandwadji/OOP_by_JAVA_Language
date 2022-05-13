@@ -1,8 +1,8 @@
 package fr.eql.ai11.Java.Init.demo.collection;
 
 import fr.eql.ai11.Java.Init.demo.oop.Toy;
-import java.util.HashSet;
-import java.util.Set;
+
+import java.util.*;
 
 public class DemoHashSet {
     public static void main(String[] args) {
@@ -19,9 +19,10 @@ public class DemoHashSet {
         Toy toy2 = new Toy("Souris en plastique");
         Toy toy3 = new Toy("Branche");
 
-        toys.add(toy1);
-        toys.add(toy2);
-        toys.add(toy3);
+//        toys.add(toy1);
+//        toys.add(toy2);
+//        toys.add(toy3);
+        Collections.addAll(toys, toy1,toy2, toy3);
 
         System.out.println("*** Obtenir la taille et les éléments du Set ***");
             System.out.println("Taille : " + toys.size() + "\n");
@@ -74,7 +75,7 @@ public class DemoHashSet {
             if(toys.isEmpty()) System.out.println("Le Set toys est vide");
 
             //On peut convertir un Set en Liste
-            //List<Toy> toysList =  new ArrayList<>(toys);
+            List<Toy> toysList =  new ArrayList<>(toys);
 
 
     }
