@@ -1,7 +1,5 @@
 package fr.eql.ai11.Java.Init.tp.serie.v2;
 
-import fr.eql.ai11.Java.Init.tp.serie.v1.Season;
-
 import javax.swing.JOptionPane;
 
 public abstract class Serie {
